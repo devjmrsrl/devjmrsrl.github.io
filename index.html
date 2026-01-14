@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Cumpleaños Sorpresa de Sofía!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --mexican-pink: #E91E63;
+            --mexican-yellow: #FFC107;
+            --mexican-teal: #009688;
+            --dark-bg: #2c2c2c;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdfbf7;
+            background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: #333;
+        }
+
+        .flower-header {
+            /* Imagen de flores estilo acuarela/mexicano */
+            background-image: url("flores2.jpg");
+            background-size: cover;
+            background-position: center top;
+            height: 150px;
+            border-radius: 15px 15px 0 0;
+            position: relative;
+        }
+
+        .flower-decoration-bottom {
+            background-image: url('flores1.jpg'); 
+            background-size: cover;
+            background-position: center bottom;
+            height: 80px;
+            transform: rotate(180deg);
+            border-radius: 15px 15px 0 0;
+            margin-top: 20px;
+        }
+
+        .card-invitation {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            overflow: hidden;
+            border-bottom: 5px solid var(--mexican-pink);
+        }
+
+        .title-font {
+            font-family: 'Great Vibes', cursive;
+            color: var(--mexican-pink);
+            font-size: 3.5rem;
+            margin-bottom: 0;
+        }
+
+        .surprise-badge {
+            background-color: var(--mexican-teal);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .shhh-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .shhh-box i {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .details-box {
+            margin: 30px 0;
+        }
+        
+        .details-item {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .details-item i {
+            color: var(--mexican-teal);
+            margin-right: 10px;
+            width: 25px;
+        }
+
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #eee;
+            margin-top: 15px;
+        }
+
+        .btn-rsvp {
+            background-color: var(--mexican-pink);
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            transition: transform 0.2s;
+        }
+
+        .btn-rsvp:hover {
+            background-color: #d81b60;
+            transform: scale(1.05);
+        }
+
+        /* Efecto Papel Picado sutil en bordes */
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #ccc;
+            margin: 20px 0;
+        }
+        .separator::before, .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ccc;
+        }
+        .separator:not(:empty)::before {
+            margin-right: .25em;
+        }
+        .separator:not(:empty)::after {
+            margin-left: .25em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container px-3">
+        <div class="card card-invitation">
+            <div class="flower-header"></div>
+            
+            <div class="card-body text-center p-4">
+                
+                <span class="surprise-badge"><i class="fas fa-user-secret"></i> Top Secret</span>
+                
+                <h1 class="title-font mt-2">Sofía</h1>
+                <p class="text-muted text-uppercase mb-4">¡Te invitamos a su fiesta de cumpleaños!</p>
+
+                <div class="shhh-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>¡IMPORTANTE: ES SORPRESA!</strong><br>
+                    Por favor, no le digas nada. Si Sofía te invita a hacer algo ese día, decile que no podés porque tenés "otro compromiso". 😉
+                </div>
+
+                <div class="separator"><i class="fas fa-star text-warning"></i></div>
+
+                <div class="details-box">
+                    <div class="details-item">
+                        <i class="far fa-calendar-alt"></i> <strong>Sábado 17 de Enero</strong>
+                    </div>
+                    <div class="details-item">
+                        <i class="far fa-clock"></i> <strong>22:30 hs</strong>
+                    </div>
+                    <div class="details-item">
+                        <i class="fas fa-map-marker-alt"></i> <strong>B° Huaico MZA 463D Casa 21</strong>
+                    </div>
+                </div>
+
+                <p class="mb-2 text-muted small">Ubicación del evento:</p>
+                <div class="map-container ratio ratio-16x9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d249.2253026739375!2d-65.4204284274839!3d-24.718732193409416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sar!4v1768411027098!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                <div class="mt-4">
+                    <button class="btn btn-primary btn-rsvp text-white" onclick="confirmarWhatsApp()">
+                        <i class="fab fa-whatsapp"></i> Confirmar Asistencia
+                    </button>
+                </div>
+            </div>
+            
+            <div class="flower-decoration-bottom"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        // Disparar confeti al cargar la página
+        window.addEventListener('load', () => {
+            var duration = 3 * 1000;
+            var animationEnd = Date.now() + duration;
+            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+            function randomInRange(min, max) {
+            return Math.random() * (max - min) + min;
+            }
+
+            var interval = setInterval(function() {
+            var timeLeft = animationEnd - Date.now();
+
+            if (timeLeft <= 0) {
+                return clearInterval(interval);
+            }
+
+            var particleCount = 50 * (timeLeft / duration);
+            // Confeti desde esquinas random
+            confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+            confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+            }, 250);
+        });
+
+        // Función para enviar WhatsApp
+        function confirmarWhatsApp() {
+            // Aquí puedes poner tu número real si quieres que te llegue el mensaje a ti
+            let telefono = "5493873076160"; // Reemplaza las X con tu número (ej: 549387...)
+            let mensaje = "¡Hola! Confirmo mi asistencia para el cumple sorpresa de Sofía 🥳.";
+            let url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
